@@ -1,0 +1,117 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI; 
+
+public class Movement_second_player : MonoBehaviour
+{
+    public Text text_player1; 
+    public GameObject yellow_clean;
+    public float count_yellow_right;
+    public float count_yellow_left;
+    public float count_yellow_up;
+    public float count_yellow_down;
+    int counter = 0;
+    public float player_2_speed = 2f;
+    public float sum = 0;
+    public bool move = false;
+    public float timer = .5f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        StartCoroutine("MopInfluence");
+        
+    }
+    IEnumerator MopInfluence()
+    {
+        float timeCounter = 0f;
+
+        while (true)
+        {
+            if (move == true)
+            {
+                if (timeCounter > 0)
+                {
+                    timeCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    Score2_.Score_2++;
+                    counter++;
+                    sum = counter;
+
+                    Instantiate(yellow_clean, transform.position, Quaternion.identity);
+                    timeCounter = timer;
+                }
+            }
+
+
+            yield return null;
+
+        }
+
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+
+      /*  float h = Input.GetAxis("Horizontal") * Time.deltaTime * 2f;
+        float v = Input.GetAxis("Vertical") * Time.deltaTime * 2f ;
+        transform.Translate(h, v, 0);
+
+    */
+
+         
+
+
+        float h = 0;
+        float v = 0;
+
+        //float v = Input.GetAxis("Vertical") * Time.deltaTime;
+
+        if (Input.GetKey("right"))
+        {
+            
+            h = 1 * Time.deltaTime * player_2_speed;
+           // Score2_.Score_2++; 
+           // count_yellow_left++; 
+        }
+        if (Input.GetKey("left"))
+        {
+            
+            h = -1 * Time.deltaTime * player_2_speed;
+           // Score2_.Score_2++; 
+
+            //count_yellow_right++;
+        }
+        if (Input.GetKey("up"))
+        {
+            
+
+            v = 1 * Time.deltaTime * player_2_speed;
+           // Score2_.Score_2++;
+
+           // count_yellow_up++;
+        }
+        if (Input.GetKey("down"))
+        {
+           
+
+            v = -1 * Time.deltaTime * player_2_speed;
+           // Score2_.Score_2++;
+
+           // count_yellow_down++;
+        }
+        if (h != 0 || v != 0) move = true;
+        else move = false;
+
+       // sum  = count_yellow_left + count_yellow_right + count_yellow_up + count_yellow_down;  // + count_green + count_red + count_white;
+        print(sum);
+        transform.Translate(h, v, 0);
+
+ 
+    }
+}

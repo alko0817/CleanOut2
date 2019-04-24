@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - f_solution6
+  - Blue_one
+  - Yellow_one
+  - Fire_
+  - Right Wall
+  - Left Wall
+  - Top Wall
+  - Bottom Wall
+  - Player 2
+  - Shield
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - white_cleaner
+  - player_1
+  - cursor
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 3911078091
+    locked: 0
+  - name: Walls
+    uniqueID: 588631327
+    locked: 0
+  - name: Random_Shit
+    uniqueID: 2885547985
+    locked: 0
+  - name: trail
+    uniqueID: 2042126267
+    locked: 0
+  - name: Player
+    uniqueID: 2060670793
+    locked: 0
+  - name: Foreground
+    uniqueID: 160246487
+    locked: 0
