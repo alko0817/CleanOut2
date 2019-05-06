@@ -9,13 +9,13 @@ public class Score_1 : MonoBehaviour
     public static int Score = 0;
     void Start()
     {
-        t_score.text = "Detergent Score:" + Score.ToString();
+        t_score.text = Score.ToString();
     }
 
     void Update()
     {
        
-        t_score.text = "Detergent Score:" + Score.ToString();
+        t_score.text = Score.ToString();
     }
 }
  

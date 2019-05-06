@@ -8,14 +8,14 @@ public class Spawner_fire : MonoBehaviour
     public GameObject Animals_ ;
     public GameObject shield;
     public Transform[] SpawnPoints;
-    public Transform[] SpawnAnimals;
+   // public Transform[] SpawnAnimals;
     public Transform[] SpawnShield;
 
     void Start()
     {
         InvokeRepeating("Spawn_Fire", 10, 20);
-        InvokeRepeating("Spawn_Enemies", 1 , 15);
-        InvokeRepeating("Spawn_Shield", 8, 16);
+        //InvokeRepeating("Spawn_Enemies", 1 , 15);
+        InvokeRepeating("Spawn_Shield", 8, 25);
 
     }
 
@@ -26,12 +26,12 @@ public class Spawner_fire : MonoBehaviour
     }
 
 
-    void Spawn_Enemies()
+    /*void Spawn_Enemies()
     {
         int spawnIndex = Random.Range(0, SpawnAnimals.Length);
-         Instantiate(Animals_, SpawnAnimals[spawnIndex].position, SpawnAnimals[spawnIndex].rotation)  ;
+         Instantiate(Animals_, SpawnAnimals[spawnIndex].position, SpawnAnimals[spawnIndex].rotation);
 
-    }
+    }*/
 
     void Spawn_Shield()
     {

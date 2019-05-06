@@ -60,7 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\newAI.cs" />
+    <Compile Include="Assets\fadeIn.cs" />
+    <Compile Include="Assets\fadeOut.cs" />
+    <Compile Include="Assets\immuneTest.cs" />
+    <Compile Include="Assets\inputAssign.cs" />
+    <Compile Include="Assets\mouseDirection.cs" />
+    <Compile Include="Assets\newTrail.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -106,6 +111,12 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Raving Bots\Multi-Input\Example\Sources\MIDemoAssignDevices.cs" />
+    <Compile Include="Assets\Raving Bots\Multi-Input\Example\Sources\MIDemoPawnController.cs" />
+    <Compile Include="Assets\Raving Bots\Multi-Input\Example\Sources\MIDemoPawnType.cs" />
+    <Compile Include="Assets\Raving Bots\Multi-Input\Example\Sources\MIDemoPlayer.cs" />
+    <Compile Include="Assets\Raving Bots\Multi-Input\Example\Sources\MIDemoPlayerPawn.cs" />
+    <Compile Include="Assets\Raving Bots\Multi-Input\Example\Sources\MIDemoSelectPlayerCount.cs" />
     <Compile Include="Assets\Scripts\Menus\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Menus\cursor.cs" />
     <Compile Include="Assets\Scripts\Menus\mainMenu.cs" />
@@ -119,10 +130,13 @@
     <Compile Include="Assets\Scripts\Movement&amp;otherShit\MouseMovement.cs" />
     <Compile Include="Assets\Scripts\Movement&amp;otherShit\Movement_second_player.cs" />
     <Compile Include="Assets\Scripts\Movement&amp;otherShit\Moving_first_player.cs" />
+    <Compile Include="Assets\Scripts\Movement&amp;otherShit\newAI3.cs" />
     <Compile Include="Assets\Scripts\Movement&amp;otherShit\Score_1.cs" />
     <Compile Include="Assets\Scripts\Movement&amp;otherShit\Score2_.cs" />
     <Compile Include="Assets\Scripts\Movement&amp;otherShit\WallCollider.cs" />
-    <Compile Include="Assets\Scripts\Power-ups\Animals_movement.cs" />
+    <Compile Include="Assets\Scripts\movement2.cs" />
+    <Compile Include="Assets\Scripts\newFollow.cs" />
+    <Compile Include="Assets\Scripts\noRotor.cs" />
     <Compile Include="Assets\Scripts\Power-ups\backToMenu.cs" />
     <Compile Include="Assets\Scripts\Power-ups\effectOff.cs" />
     <Compile Include="Assets\Scripts\Power-ups\fire_shooting_p2.cs" />
@@ -133,9 +147,13 @@
     <Compile Include="Assets\Scripts\Power-ups\p2_power_score.cs" />
     <Compile Include="Assets\Scripts\Power-ups\protectP2.cs" />
     <Compile Include="Assets\Scripts\Power-ups\shoot_bag_follow_player_2.cs" />
+    <Compile Include="Assets\Scripts\reset.cs" />
     <Compile Include="Assets\Scripts\Spawner_fire.cs" />
     <Compile Include="Assets\Scripts\Time_and_score.cs" />
+    <Compile Include="Assets\Scripts\timer.cs" />
     <Compile Include="Assets\Scripts\yellow_code.cs" />
+    <Compile Include="Assets\trailManager.cs" />
+    <Compile Include="Assets\walk.cs" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -171,6 +189,7 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
+    <None Include="Assets\Raving Bots\Multi-Input\Plugins\RavingBots.MultiInput.xml" />
     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
@@ -195,58 +214,58 @@
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Triangle.Runtime">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Triangle.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -449,14 +468,20 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="RavingBots.MultiInput">
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Assets/Raving Bots/Multi-Input/Plugins/RavingBots.MultiInput.dll</HintPath>
+    </Reference>
+    <Reference Include="RavingBots.MultiInput.Editor">
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Assets/Raving Bots/Multi-Input/Plugins/RavingBots.MultiInput.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/Cleanout/Cleanout/cleen_trying/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Alex/OneDrive - Uppsala universitet/newCleanOut/CleanOut2/Cleanout/cleen_trying/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

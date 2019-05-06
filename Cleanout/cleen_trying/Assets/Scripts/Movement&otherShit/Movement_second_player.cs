@@ -83,7 +83,7 @@ public class Movement_second_player : MonoBehaviour
                 }
             }
         }
-
+        
     }
  
     public void OnTriggerEnter2D (Collider2D other)

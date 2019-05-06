@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class p1_shooting : MonoBehaviour
 {
+
     void Update()
-    {       
-        Destroy(gameObject, 10);         
+    {     
+        Destroy(gameObject, 20);         
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -15,7 +16,6 @@ public class p1_shooting : MonoBehaviour
         {
             Destroy(other.gameObject, 1);
             Destroy(gameObject, 1);
-            Score2_.Score_2 -=6; 
         }
     }
 }

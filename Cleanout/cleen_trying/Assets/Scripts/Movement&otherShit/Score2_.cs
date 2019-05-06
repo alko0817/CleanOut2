@@ -10,12 +10,12 @@ public class Score2_ : MonoBehaviour
 
     void Start()
     {
-        t_score.text = "Radioactive Score:" + Score_2.ToString();
+        t_score.text = Score_2.ToString();
     }
 
     void Update()
     {
-        t_score.text = "Radioactive Score:" + Score_2.ToString();
+        t_score.text = Score_2.ToString();
     }
 }
 

@@ -8,15 +8,7 @@ public class WallCollider : MonoBehaviour
     public Rigidbody2D rb;
     public float delay = 1f;
     float countDown;
-
-
-    IEnumerator Hello ()
-    {
-        yield return new WaitForSeconds(0.15f);
-        rb.velocity = Vector2.zero;
-        rb.angularVelocity = 0;
-        countDown = delay;
-    }
+    float speed;
 
     void Start()
     {
@@ -24,24 +16,30 @@ public class WallCollider : MonoBehaviour
         countDown = delay;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void Update()
     {
-        StartCoroutine("Hello");
-        if (other.gameObject.tag == "Right Wall")
+        speed = MouseMovement.Speed;
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        string wall = other.gameObject.tag;
+
+        switch (wall)
         {
-            rb.AddForce(Vector2.left * pushForce, ForceMode2D.Impulse);
-        }
-        if (other.gameObject.tag == "Left Wall")
-        {
-            rb.AddForce(-Vector2.left * pushForce, ForceMode2D.Impulse);
-        }
-        if (other.gameObject.tag == "Top Wall")
-        {
-            rb.AddForce(-Vector2.up * pushForce, ForceMode2D.Impulse);
-        }
-        if (other.gameObject.tag == "Bottom Wall")
-        {
-            rb.AddForce(Vector2.up * pushForce, ForceMode2D.Impulse);
+            case "Right Wall":
+                rb.velocity = speed * -transform.right;
+                break;
+            case "Left Wall":
+                rb.velocity = speed * transform.right;
+                break;
+            case "Top Wall":
+                rb.velocity = speed * -transform.up;
+                break;
+            case "Bottom Wall":
+                rb.velocity = speed * transform.up;
+                break;
+            default: break;
         }
     }
 }

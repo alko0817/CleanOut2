@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Time_and_score : MonoBehaviour
 {
     public float waitTime;
-    public float times;
+    public float timer;
 
     void Start()
     {
@@ -14,12 +14,12 @@ public class Time_and_score : MonoBehaviour
 
     void Update()
     {
-        if (times > 0.0f)
+        if (timer > 0.0f)
         {
-            times -= Time.deltaTime;
+            timer -= Time.deltaTime;
         }
 
-        if (times < 2)
+        if (timer < 2)
         {
             check_score();
         }

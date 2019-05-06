@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour {
 
     private void Start()
     {
-        Play("epicIntro");  
+        Play("dubstep");  
     }
 
     public void Play (string name)

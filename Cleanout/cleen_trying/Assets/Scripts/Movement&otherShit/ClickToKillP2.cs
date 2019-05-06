@@ -16,7 +16,7 @@ public class ClickToKillP2 : MonoBehaviour
             clicked++;
         }
         if (clicked > clicks)
-        {
+        {   
             Enemy.SetActive(false);
             StartCoroutine("Yeet");
             clicked = 0;
